@@ -1,13 +1,19 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
+    colors: {
+      ...colors,
+      background: '#32292f',
+      backgroundLighter: '#4c3e47',
+      accent: '#ffeedb',
+      primary: '59c3c3',
+      secondary: '#c17c74',
+    },
     fontFamily: {
       'sans': ['Tajawal', 'ui-sans-serif', 'system-ui'],
-      'serif': ['ui-serif', 'Georgia'],
-      'mono': ['ui-monospace', 'SFMono-Regular'],
-      'display': ['Oswald'],
-      'body': ['"Open Sans"'],
     },
     minWidth: {
       '0': '0',
@@ -29,6 +35,12 @@ module.exports = {
       '3/4': '75%',
       'full': '100%',
     },
+    // backgroundColor: theme => ({
+    //   ...theme('colors'),
+    // }),
+    // gradientColorStops: theme => ({
+    //   ...theme('colors'),
+    // }),
     extend: {},
   },
   variants: {
